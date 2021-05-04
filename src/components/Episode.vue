@@ -4,13 +4,14 @@
         <div class="card shadow-sm">
             <!-- Reload -->
             <div class="card-header d-flex justify-content-end">                
-                <span v-on:click="reloadEpisode()">    
+                <span class="icon-reload" v-on:click="reloadEpisode()">    
                     <i class="fas fa-sync"></i>
                 </span>    
             </div>
             <div class="card-body">
                 <!-- Titulo -->
-                <h5 class="card-title">API Episode: <i class="small">cuántas veces aparece la letra "e"</i></h5>
+                <h5 class="card-title">API Episode</h5>                
+                <p class="card-text"><em>Cuántas veces aparece la letra "e" en los nombres de todos los <span class="tag">episode</span></em></p>
                 <!-- Mostrar cantidad de resultados -->
                 <p class="card-text">Cantidad: <strong>{{ this.cantidad }}</strong></p>
                 <!-- Mostrar tiempo de ejecución -->

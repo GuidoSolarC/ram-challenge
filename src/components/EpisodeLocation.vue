@@ -4,13 +4,17 @@
         <div class="card shadow-sm">
             <!-- Reload -->
             <div class="card-header d-flex justify-content-end">                
-                <span v-on:click="reloadEpisodes()">    
+                <span class="icon-reload" v-on:click="reloadEpisodes()">    
                     <i class="fas fa-sync"></i>
                 </span>    
             </div>
             <div class="card-body">
                 <!-- Titulo -->
-                <h5 class="card-title">Episode/Location: <i class="small">cantidad y listado location (origin) de todos los characters de cada episode</i></h5>
+                <h5 class="card-title">Episode/Location</h5>                
+                <p class="card-text"><em>Cantidad y listado con las 
+                    <span class="tag">location</span> (<span class="tag">origin</span>) 
+                    de todos los <span class="tag">characters</span> de cada <span class="tag">episode</span> (sin repetir)</em>
+                </p>
                 <!-- Mostrar cantidad de resultados -->
                 <p class="card-text">Cantidad: <strong>{{ this.cantidad }}</strong></p>
                 <!-- Mostrar tiempo de ejecución -->

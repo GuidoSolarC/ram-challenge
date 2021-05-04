@@ -1,16 +1,17 @@
 <template>
     <!-- Card -->
     <div class="col-4">
-        <div class="card shadow-sm">
+        <div class="card">
             <!-- Reload -->
             <div class="card-header d-flex justify-content-end">                
-                <span v-on:click="reloadLocation()">    
+                <span class="icon-reload" v-on:click="reloadLocation()">    
                     <i class="fas fa-sync"></i>
                 </span>    
             </div>
             <div class="card-body">
                 <!-- Titulo -->
-                <h5 class="card-title">API Location: <i class="small">cuántas veces aparece la letra "l"</i></h5>
+                <h5 class="card-title">API Location</h5>
+                <p class="card-text"><em>Cuántas veces aparece la letra "l" en los nombres de todos los <span class="tag">location</span></em></p>
                 <!-- Mostrar cantidad de resultados -->
                 <p class="card-text">Cantidad: <strong>{{ this.cantidad }}</strong></p>
                 <!-- Mostrar tiempo de ejecución -->

@@ -4,13 +4,14 @@
         <div class="card shadow-sm">
             <!-- Reload -->
             <div class="card-header d-flex justify-content-end">    
-                <span v-on:click="reloadCharacter()">    
+                <span class="icon-reload" v-on:click="reloadCharacter()">    
                     <i class="fas fa-sync"></i>
                 </span>        
             </div>
             <div class="card-body">
                 <!-- Titulo -->
-                <h5 class="card-title">API Character: <i class="small">cuántas veces aparece la letra "c"</i></h5>
+                <h5 class="card-title">API Character</h5>
+                <p class="card-text"><em>Cuántas veces aparece la letra "c" en los nombres de todos los <span class="tag">character</span></em></p>
                 <!-- Mostrar cantidad de resultados -->
                 <p class="card-text">Cantidad: <strong>{{ this.cantidad }}</strong></p>
                 <!-- Mostrar tiempo de ejecución -->
