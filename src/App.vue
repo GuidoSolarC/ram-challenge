@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Home msg="Welcome to Your Vue.js App"/>
+    <p class="lead">
+      Rick & Morty Challenge - Guido Solar
+    </p>
+    <Home/>
   </div>
 </template>
 
@@ -15,14 +17,9 @@ export default {
   }
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body{
+    background: #eeeeee;
+    padding: 3rem 4rem;
+  }
 </style>
