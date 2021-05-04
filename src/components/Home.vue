@@ -8,6 +8,10 @@
       <!-- Card de Character -->
       <Character/>
     </div>     
+    <div class="row mt-4">      
+      <!-- Card con episode / location -->
+      <EpisodeLocation/>
+    </div>
   </div>
 </template>
 
@@ -16,6 +20,7 @@
 import Location from '@/components/Location'
 import Episode from '@/components/Episode'
 import Character from '@/components/Character'
+import EpisodeLocation from '@/components/EpisodeLocation'
 
 export default {
 	mounted () {},
@@ -25,7 +30,8 @@ export default {
 	components: {	
     Location,
     Episode,
-    Character
+    Character,
+    EpisodeLocation
 	}
 }
 </script>
