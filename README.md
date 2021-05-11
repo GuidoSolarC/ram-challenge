@@ -33,6 +33,5 @@ Una vez desplegado el proyecto, se debiera visualizar lo siguiente.
 
 ---
 ### Pequeño disclaimer
-Lamentablemente, no me la pude con los unit testing (:penita), porque no he podido tener la experiencia de utilizarlos en los ambientes donde he trabajado anteriormente, y tampoco me he dado el tiempo de estudiarlo de manera consciente (mala mia), asi que me queda por aprender a usarlos de ahora en más. (Preferi no agregarlos, a agregar código "malo" y/o sin sentido xD)
-
+Lamentablemente, no me la pude con los unit testing, porque no he podido tener la experiencia de utilizarlos en los ambientes donde he trabajado anteriormente, y tampoco me he dado el tiempo de estudiarlo de manera consciente, asi que me queda por aprender a usarlos de ahora en más.
 Gracias por su tiempo.
