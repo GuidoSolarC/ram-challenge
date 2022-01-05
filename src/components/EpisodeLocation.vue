@@ -47,7 +47,15 @@ export default {
             // Limpio array de episode
             this.respuesta_episode = []
 
+            // Array con personajes no repetidos
+            var charactersUrl = []
+            var optionAxios = {
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
+            }
 			this.axios.get(this.apiEpisode+'/?page=' + this.pagina, { 
+                optionAxios
             }).then(response => {
                 // Determino si la API devuelve más "pages" en "next"
                 this.next = response.data.info.next                    
@@ -58,20 +66,24 @@ export default {
                     let chapter_characters = element.characters
                     // Obtengo cada url API de character
                     chapter_characters.forEach(url_character => {
-                        // Ejecuto API de character
-                        this.obtenerOriginCharacter(url_character, element.episode)
+                        // Busco si personaje ya se encuentra en array
+                        if (charactersUrl.indexOf(url_character) === -1) {
+                            // Guardo en array
+                            charactersUrl.push(url_character)                        
+                        }
                     })
-                })    
+                })                   
+                
                 // Continuo si "next" es distinto de null
                 if(this.next){           
                     // Seteo siguiente pagina y vuelvo a ejecutar API
                     this.pagina++
                     this.obtenerEpisode()
                 } else {
-                    // Termino "cronómetro"
-                    this.tiempo_termino = window.performance.now()       
-                    // Seteo valor en tiempo de ejecución
-                    this.tiempo_ejecucion = (this.tiempo_termino - this.tiempo_inicio) / 1000
+                    // Luego de obtener el listado unico de personajes sin repetir, busco sus origin
+                    charactersUrl.forEach(urlApi => {
+                        this.obtenerOriginCharacter(urlApi)                    
+                    })
                 }         
             })
             .catch(error => {
@@ -81,7 +93,13 @@ export default {
 		},
         // En base a la URL API de cada character, busco su origin
         obtenerOriginCharacter: function(urlApi){
+			var optionAxios = {
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
+            }
             this.axios.get(urlApi, { 
+				optionAxios
             }).then(response => {
                 // Contengo lo encontrado para cada character
                 let origen_character = response.data.origin.name
@@ -91,7 +109,11 @@ export default {
                     this.origin_array.push(origen_character)
                     // Sumo cantidad
                     this.cantidad++
-                }
+                }              
+                // Termino "cronómetro"
+                this.tiempo_termino = window.performance.now()       
+                // Seteo valor en tiempo de ejecución
+                this.tiempo_ejecucion = (this.tiempo_termino - this.tiempo_inicio) / 1000
             })
             .catch(error => {
                 console.log(error.response) 

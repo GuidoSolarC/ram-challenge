@@ -30,8 +30,3 @@ La estructura de archivos, está compuesta de la siguiente manera.
 
 Una vez desplegado el proyecto, se debiera visualizar lo siguiente.
 ![Captura de Pantalla 2021-05-04 a la(s) 21 23 13](https://user-images.githubusercontent.com/36977397/117087941-04bcb700-ad1f-11eb-85e4-fd74b87b1ac0.png)
-
----
-### Pequeño disclaimer
-Lamentablemente, no me la pude con los unit testing, porque no he podido tener la experiencia de utilizarlos en los ambientes donde he trabajado anteriormente, y tampoco me he dado el tiempo de estudiarlo de manera consciente, asi que me queda por aprender a usarlos de ahora en más.
-Gracias por su tiempo.

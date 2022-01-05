@@ -34,8 +34,13 @@ export default {
             }            
             // Limpio array de episode
             this.respuesta_episode = []
-
-			this.axios.get(this.apiEpisode+'/?page=' + this.pagina, { 
+            var optionAxios = {
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
+            }
+			this.axios.get(this.apiEpisode+'?page=' + this.pagina, { 
+                optionAxios
             }).then(response => {
                 // Determino si la API devuelve más "pages" en "next"
                 this.next = response.data.info.next                    
